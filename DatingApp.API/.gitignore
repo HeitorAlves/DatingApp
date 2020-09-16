@@ -2,3 +2,6 @@
 obj
 *.db
 *.lnk
+.vs
+.db-shm
+.db-wal
