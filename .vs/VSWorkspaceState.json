@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\DatingApp.API",
+    "\\DatingApp.API\\Helpers",
     "\\DatingApp.API\\Models"
   ],
-  "SelectedNode": "\\DatingApp.API\\Models\\Value.cs",
+  "SelectedNode": "\\DatingApp.API\\Helpers\\Class.cs",
   "PreviewInSolutionExplorer": true
 }
