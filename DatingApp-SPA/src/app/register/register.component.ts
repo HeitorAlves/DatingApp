@@ -1,6 +1,8 @@
+import { AlertifyService } from './../services/alertify.service';
 import { AuthService } from './../services/auth.service';
 import { registerLocaleData } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+
 
 
 @Component({
@@ -14,7 +16,9 @@ export class RegisterComponent {
 
     model: any = {};
 
-    constructor(private authService: AuthService){}
+    constructor(private authService: AuthService,
+                private alertify: AlertifyService
+                ){}
 
 
     register(): void {
@@ -22,17 +26,17 @@ export class RegisterComponent {
         (
             () =>
                 {
-                    console.log('registration sucess');
+                    this.alertify.sucess('registration sucess');
                 },
             erro =>
                 {
-                    console.log('Error Registrate User Erro code:', erro);
+                    this.alertify.erro(erro);
                 }
         )
     }
 
     cancel(): void{
         this.cancelRegister.emit(false);
-        console.log('canceled');
+        this.alertify.message('canceled');
     }
 }
